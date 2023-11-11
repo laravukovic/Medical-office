@@ -1,0 +1,337 @@
+[{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5add1"
+  },
+  "name": "Elektrokardiogram (EKG)",
+  "duration": "10",
+  "price": "1500",
+  "specialization": "Kardiolog",
+  "branch": "Kardiologija",
+  "doctors": [
+    "marko",
+    "mina"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5add2"
+  },
+  "name": "Ehokardiografija",
+  "duration": "40",
+  "price": "4000",
+  "specialization": "Kardiolog",
+  "branch": "Kardiologija",
+  "doctors": [
+    "marko"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5add3"
+  },
+  "name": "Koronarna angiografija",
+  "duration": "60",
+  "price": "20000",
+  "specialization": "Kardiolog",
+  "branch": "Kardiologija",
+  "doctors": [
+    "marko",
+    "mina"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5add4"
+  },
+  "name": "Dermatoskopija",
+  "duration": "15",
+  "price": "2300",
+  "specialization": "Dermatolog",
+  "branch": "Dermatologija",
+  "doctors": [
+    "filip"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5add5"
+  },
+  "name": "Biopsija kože",
+  "duration": "30",
+  "price": "5200",
+  "specialization": "Dermatolog",
+  "branch": "Dermatologija",
+  "doctors": [
+    "filip"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5add6"
+  },
+  "name": "Laser terapija",
+  "duration": "50",
+  "price": "3000",
+  "specialization": "Dermatolog",
+  "branch": "Dermatologija",
+  "doctors": [
+    "filip",
+    "dule"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5add7"
+  },
+  "name": "Redovan pedijatrijski pregled",
+  "duration": "15",
+  "price": "1500",
+  "specialization": "Pedijatar",
+  "branch": "Pedijatrija",
+  "doctors": [
+    "milica"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5add8"
+  },
+  "name": "Pregled i vakcinacija novorođenčeta",
+  "duration": "40",
+  "price": "2000",
+  "specialization": "Pedijatar",
+  "branch": "Pedijatrija",
+  "doctors": [
+    "milica",
+    "lazar"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5add9"
+  },
+  "name": "Pregled razvoja deteta",
+  "duration": "45",
+  "price": "1500",
+  "specialization": "Pedijatar",
+  "branch": "Pedijatrija",
+  "doctors": [
+    "milica",
+    "lazar"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5adda"
+  },
+  "name": "Ortopedski pregled",
+  "duration": "15",
+  "price": "2100",
+  "specialization": "Ortoped",
+  "branch": "Ortopedija",
+  "doctors": [
+    "jasmina",
+    "una"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5addb"
+  },
+  "name": "Radiografija (X-zraci)",
+  "duration": "10",
+  "price": "1600",
+  "specialization": "Ortoped",
+  "branch": "Ortopedija",
+  "doctors": [
+    "jasmina"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5addc"
+  },
+  "name": "Magnetna rezonanca (MR)",
+  "duration": "60",
+  "price": "12500",
+  "specialization": "Ortoped",
+  "branch": "Ortopedija",
+  "doctors": [
+    "jasmina",
+    "una"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5addd"
+  },
+  "name": "Ginekološki pregled",
+  "duration": "20",
+  "price": "1700",
+  "specialization": "Ginekolog",
+  "branch": "Ginekologija",
+  "doctors": [
+    "ivan"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5adde"
+  },
+  "name": "Papa test (PAPA bris)",
+  "duration": "5",
+  "price": "1800",
+  "specialization": "Ginekolog",
+  "branch": "Ginekologija",
+  "doctors": [
+    "ivan"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5addf"
+  },
+  "name": "Ultrazvuk zdjelice",
+  "duration": "20",
+  "price": "4200",
+  "specialization": "Ginekolog",
+  "branch": "Ginekologija",
+  "doctors": [
+    "ivan"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5ade0"
+  },
+  "name": "Oftalmološki pregled",
+  "duration": "15",
+  "price": "1500",
+  "specialization": "Oftalmolog",
+  "branch": "Oftalmologija",
+  "doctors": [
+    "ivana"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5ade1"
+  },
+  "name": "Tonometrija",
+  "duration": "10",
+  "price": "2000",
+  "specialization": "Oftalmolog",
+  "branch": "Oftalmologija",
+  "doctors": [
+    "ivana"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a4c374b5a652836e5ade2"
+  },
+  "name": "Dijagnostička širenja zenica",
+  "duration": "30",
+  "price": "2000",
+  "specialization": "Oftalmolog",
+  "branch": "Oftalmologija",
+  "doctors": [
+    "ivana"
+  ],
+  "accepted": true
+},
+{
+  "_id": {
+    "$oid": "650a53151bbc096ea2f46e72"
+  },
+  "name": "Stres test",
+  "duration": 20,
+  "price": 100000,
+  "specialization": "Kardiolog",
+  "branch": "Kardiologija",
+  "doctors": [],
+  "accepted": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a533c1bbc096ea2f46e74"
+  },
+  "name": "CT skeniranje srca (koronarna CT angiografija)",
+  "duration": 30,
+  "price": 200000,
+  "specialization": "Kardiolog",
+  "branch": "Kardiologija",
+  "doctors": [],
+  "accepted": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a539b1bbc096ea2f46e76"
+  },
+  "name": "Hirurško uklanjanje madeža ili tumora",
+  "duration": 180,
+  "price": 80000,
+  "specialization": "Dermatolog",
+  "branch": "Dermatologija",
+  "doctors": [],
+  "accepted": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a53dc1bbc096ea2f46e78"
+  },
+  "name": "Krvne analize i testiranje",
+  "duration": 45,
+  "price": 7000,
+  "specialization": "Pedijatar",
+  "branch": "Pedijatrija",
+  "doctors": [],
+  "accepted": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a54381bbc096ea2f46e7a"
+  },
+  "name": "Fizikalna terapija",
+  "duration": 60,
+  "price": 5000,
+  "specialization": "Ortoped",
+  "branch": "Ortopedija",
+  "doctors": [],
+  "accepted": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a546c1bbc096ea2f46e7c"
+  },
+  "name": "Ultrazvuk karlice",
+  "duration": 15,
+  "price": 2300,
+  "specialization": "Ginekolog",
+  "branch": "Ginekologija",
+  "doctors": [],
+  "accepted": false,
+  "__v": 0
+}]

@@ -1,0 +1,80 @@
+<body>
+    <div class="container-fluid">
+        <div class="w-100 p-3">
+          <app-header></app-header>
+        </div>
+        <nav class="navbar navbar-expand-lg transparent-navbar myNav">
+            <div class="container-fluid" >
+                <div class="row">
+                    <div class="col-sm">
+                      <h1 style="color: #3b3c3d;">Zahtev za dodavanje nove vrste pregleda:</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg transparent-navbar nav-card">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="row text-center">
+                        <div class="col-sm">
+                            <p class="error">{{message}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h5><span class="name">Naziv:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="" aria-label="name" aria-describedby="addon-wrapping" [(ngModel)]="name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Trajanje:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="number" class="form-control" placeholder="" aria-label="duration" aria-describedby="addon-wrapping" [(ngModel)]="duration">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Cena:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="number" class="form-control" placeholder="" aria-label="price" aria-describedby="addon-wrapping" [(ngModel)]="price">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Specijalizacija:</span></h5>
+                            <select [(ngModel)]="selectedOption" (change)="onOptionSelected(selectedOption)">
+                                <option *ngFor="let option of options" [value]="option">{{option}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Ogranak:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="" aria-label="branch" aria-describedby="addon-wrapping" [(ngModel)]="branch" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer text-center">
+                        <div class="col-sm">
+                            <button type="button" (click)="insert()" class="btn black">Unesi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+
+
+
+
+
+
+

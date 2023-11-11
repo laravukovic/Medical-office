@@ -1,0 +1,47 @@
+<body>
+    <div class="container-fluid">
+        <div class="w-100 p-3">
+            <app-header></app-header>
+        </div>
+        <div class="row" style="margin-top: 10%;">
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-header">
+                        <p class="card-title">Prijava</p>
+                    </div>
+                    <div class="shadow">
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <p class="error">{{message}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="input-group flex-nowrap">
+                                            <input type="text" class="form-control" placeholder="Korisničko ime" aria-label="Username" aria-describedby="addon-wrapping" [(ngModel)]="username">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row top-buffer">
+                                    <div class="col-sm">
+                                        <div class="input-group flex-nowrap">
+                                            <input type="password" class="form-control" placeholder="Lozinka" aria-label="Password" aria-describedby="addon-wrapping" [(ngModel)]="password">
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="row top-buffer text-center">
+                                    <div class="col-sm">
+                                        <button type="button" (click)="login()" class="btn">Prijavi me</button>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</body>
+

@@ -1,0 +1,67 @@
+[
+	{
+        "name" : "Elektrokardiogram (EKG)",
+        "date" : "01.07.2023",
+        "time" : "12:00",
+        "user" : "ana",
+        "doctor" : "marko",
+        "specialization" : "Kardiolog",
+        "branch" : "Kardiologija",
+        "reason" : "Dolazi radi procene srčane funkcije i potvrde zdravstvenog stanja u svrhu dijagnostike ili praćenja.",
+        "diagnosis" : "Registrovan je blagi porast nivoa srčane frekvencije tokom fizičkog napora. Preporučuje se dalja evaluacija radi utvrđivanja uzroka i praćenja srčane aktivnosti.",
+        "therapy" : "Navedenom pacijentu se preporučuje postepeno povećavanje fizičke aktivnosti uz praćenje simptoma radi procene reaktivne kardiovaskularne disfunkcije.",
+        "next" : "01.08.2023"
+    },
+    {
+        "name" : "Oftalmološki pregled",
+        "date" : "01.07.2023",
+        "time" : "14:00",
+        "user" : "ana",
+        "doctor" : "ivana",
+        "specialization" : "Oftalmolog",
+        "branch" : "Oftalmologija",
+        "reason" : "Pacijent zakazao oftalmološki pregled radi provere vidne oštrine, detekcije potencijalnih očnih oboljenja i eventualne prilagodnje dioptrije.",
+        "diagnosis" : "Miopija s astigmatizmom.",
+        "therapy" : "Propisane naočare sa odgovarajućom dioptrijom za korigovanje miopije i astigmatizma.",
+        "next" : ""
+    },
+    {
+        "name" : "Elektrokardiogram (EKG)",
+        "date" : "01.08.2023",
+        "time" : "12:00",
+        "user" : "ana",
+        "doctor" : "marko",
+        "specialization" : "Kardiolog",
+        "branch" : "Kardiologija",
+        "reason" : "Kontrola.",
+        "diagnosis" : "Izazvani porast srčane frekvencije tokom fizičkog napora može biti povezan sa stanjem povećane emotivne reaktivnosti organizma na stresne situacije.",
+        "therapy" : "Izbegavati veće fizičke aktivnosti i napore.",
+        "next" : "02.01.2024"
+    },
+    {
+        "name" : "Oftalmološki pregled",
+        "date" : "01.05.2023",
+        "time" : "14:00",
+        "user" : "mika",
+        "doctor" : "ivana",
+        "specialization" : "Oftalmolog",
+        "branch" : "Oftalmologija",
+        "reason" : "Pacijent se žali na bolove.",
+        "diagnosis" : "Izazvani porast osetljivosti očiju može biti povezan sa stanjem povećane emotivne reaktivnosti organizma na stresne situacije.",
+        "therapy" : "Izbegavati preterano gledanje televizora, kompjutera, telefona itd. Preporučeno izbegavanje izlaganju sunčane svetlosti.",
+        "next" : "01.06.2023"
+    },
+    {
+        "name" : "Magnetna rezonanca (MR)",
+        "date" : "23.05.2023",
+        "time" : "20:00",
+        "user" : "pera",
+        "doctor" : "una",
+        "specialization" : "Ortoped",
+        "branch" : "Ortopedija",
+        "reason" : "Pacijent se žali na bolove u predelu kolena. Pre nedelju dana bio na ultrazvuku koji pokazuje nejasno",
+        "diagnosis" : "Pacijent ima oštećenje patelarne tetive u dužini od 2mm.",
+        "therapy" : "Zabranjen bilo kakav vid fizičke aktivnosti minimum 3 nedelje. Nakon toga se može početi sa fizikalnom terapijom.Terapeut će pratiti situaciju i dati dozvolu za nasatvak laganong treninga",
+        "next" : "23.07.2023"
+    }
+]

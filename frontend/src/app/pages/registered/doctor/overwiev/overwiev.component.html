@@ -1,0 +1,144 @@
+<body>
+    <div class="container-fluid">
+        <div class="w-100 p-3">
+          <app-header></app-header>
+        </div>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+            <div class="container-fluid" >
+                <div class="row">
+                    <div class="col-sm">
+                      <h1 style="color: #3b3c3d;">Izveštaji pacijenta {{patient.firstname}} {{patient.lastname}}:</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+            <div class="container-fluid" >
+              <div class="row text-center">
+                  <div class="col-sm text-center" *ngFor="let report of reports">
+                      <div class="card" style="width: 18rem;">
+                          <div class="shadow">
+                              <div class="card-body report">
+                                  <h4 class="card-title">{{report.name}}</h4>
+                                  <h6 class="card-text">{{report.date}}, {{report.time}}h</h6>
+                                  <p class="card-text" style="font-weight: bold; color: #91051f;">{{report.doctorFullName}}, {{report.specialization}}</p>
+                                  <p class="card-text">{{report.branch}}</p>
+                                  <p class="card-text"><span class="bold">Razlog dolaska: </span>{{report.reason}}</p>
+                                  <p class="card-text"><span class="bold">Dijagnoza: </span>{{report.diagnosis}}</p>
+                                  <p class="card-text"><span class="bold">Preporučena terapija: </span>{{report.therapy}}</p>
+                                  <p class="card-text"><span class="bold">Kontrola: </span>{{nextFormat(report.next)}}</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+            <div class="container-fluid" >
+                <div class="row">
+                    <div class="col-sm">
+                      <h1 style="color: #3b3c3d;">Izveštaji za popunjavanje:</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+          <div class="container-fluid" >
+            <div class="row text-center">
+                <div class="col-sm text-center" *ngFor="let schedule of schedules">
+                    <div class="card" style="width: 18rem;">
+                        <div class="shadow">
+                            <div class="card-body">
+                                <h4 class="card-title">{{schedule.name}}</h4>
+                                <h6 class="card-text">{{schedule.date}}, {{schedule.time}}h</h6>
+                                <button type="button" (click)="open(schedule.name, schedule.date, schedule.time)" class="btn red">Popuni</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </nav>
+        <span *ngIf="show">
+            <nav class="navbar navbar-expand-lg transparent-navbar nav-card">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="row text-center">
+                            <div class="col-sm">
+                                <p class="error">{{message}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <h5><span class="name">Naziv:</span></h5>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" placeholder="{{name}}" aria-label="name" aria-describedby="addon-wrapping" [(ngModel)]="name" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row top-buffer">
+                            <div class="col-sm">
+                                <h5><span class="name">Datum:</span></h5>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" placeholder="{{date}}" aria-label="date" aria-describedby="addon-wrapping" [(ngModel)]="date" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row top-buffer">
+                            <div class="col-sm">
+                                <h5><span class="name">Vreme:</span></h5>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" placeholder="{{time}}" aria-label="time" aria-describedby="addon-wrapping" [(ngModel)]="time" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row top-buffer">
+                            <div class="col-sm">
+                                <h5><span class="name">Razlog dolaska:</span></h5>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" placeholder="{{reason}}" aria-label="reason" aria-describedby="addon-wrapping" [(ngModel)]="reason">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row top-buffer">
+                            <div class="col-sm">
+                                <h5><span class="name">Dijagnoza:</span></h5>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" placeholder="{{diagnosis}}" aria-label="diagnosis" aria-describedby="addon-wrapping" [(ngModel)]="diagnosis">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row top-buffer">
+                            <div class="col-sm">
+                                <h5><span class="name">Terapija:</span></h5>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" placeholder="{{therapy}}" aria-label="therapy" aria-describedby="addon-wrapping" [(ngModel)]="therapy">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row top-buffer">
+                            <div class="col-sm">
+                                <h5><span class="name">Kontrola:</span></h5>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" placeholder="{{next}}" aria-label="Phone" aria-describedby="addon-wrapping" [(ngModel)]="next">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row top-buffer text-center">
+                            <div class="col-sm">
+                                <button type="button" (click)="input()" class="btn black">Unesi</button>
+                            </div>
+                            <div class="col-sm">
+                                <button type="button" (click)="close()" class="btn red">Zatvori</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </span>
+    </div>
+</body>
+
+
+

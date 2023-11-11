@@ -1,0 +1,47 @@
+.card {
+    max-width: 40%;
+    margin-left: 30%;
+}
+
+.card-header {
+    background-color: #c30e2e;
+    color: #f9f9f9;
+}
+
+.card-body {
+    background-color: #f9f9f9;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.top-buffer {
+    margin-top: 2%;
+}
+
+.form-control:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 0.2rem rgba(0, 2, 3, 0.5);
+}
+
+.optional {
+    color: #5a6471;
+}
+
+.error {
+    color:#c30e2e;
+}
+
+.type {
+    color: #5a6471;
+}
+
+.btn {
+    background-color: black;
+    color: #eeeeee;
+}
+
+.btn:hover {
+    background-color: rgb(109, 107, 107);
+}

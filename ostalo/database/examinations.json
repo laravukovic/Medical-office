@@ -1,0 +1,164 @@
+[
+	{
+        "name" : "Elektrokardiogram (EKG)",
+        "duration" : "10",
+        "price" : "1500",
+        "specialization" : "Kardiolog",
+        "branch" : "Kardiologija",
+        "doctors" : ["marko", "mina"],
+        "accepted" : true	
+    },
+    {
+        "name" : "Ehokardiografija",
+        "duration" : "40",
+        "price" : "4000",
+        "specialization" : "Kardiolog",
+        "branch" : "Kardiologija",
+        "doctors" : ["marko"],
+        "accepted" : true	
+    },
+    {
+        "name" : "Koronarna angiografija",
+        "duration" : "60",
+        "price" : "20000",
+        "specialization" : "Kardiolog",
+        "branch" : "Kardiologija",
+        "doctors" : ["marko", "mina"],
+        "accepted" : true	
+    },
+    {
+        "name" : "Dermatoskopija",
+        "duration" : "15",
+        "price" : "2300",
+        "specialization" : "Dermatolog",
+        "branch" : "Dermatologija",
+        "doctors" : ["filip"],
+        "accepted" : true	
+    },
+    {
+        "name" : "Biopsija kože",
+        "duration" : "30",
+        "price" : "5200",
+        "specialization" : "Dermatolog",
+        "branch" : "Dermatologija",
+        "doctors" : ["filip"],
+        "accepted" : true	
+    },
+    {
+        "name" : "Laser terapija",
+        "duration" : "50",
+        "price" : "3000",
+        "specialization" : "Dermatolog",
+        "branch" : "Dermatologija",
+        "doctors" : ["filip", "dule"],
+        "accepted" : true	
+    },
+    {
+        "name" : "Redovan pedijatrijski pregled",
+        "duration" : "15",
+        "price" : "1500",
+        "specialization" : "Pedijatar",
+        "branch" : "Pedijatrija",
+        "doctors" : ["milica"],
+        "accepted" : true	
+    },
+    {
+        "name" : "Pregled i vakcinacija novorođenčeta",
+        "duration" : "40",
+        "price" : "2000",
+        "specialization" : "Pedijatar",
+        "branch" : "Pedijatrija",
+        "doctors" : ["milica", "lazar"],
+        "accepted" : true
+    },
+    {
+        "name" : "Pregled razvoja deteta",
+        "duration" : "45",
+        "price" : "1500",
+        "specialization" : "Pedijatar",
+        "branch" : "Pedijatrija",
+        "doctors" : ["milica", "lazar"],
+        "accepted" : true	
+    },
+    {
+        "name" : "Ortopedski pregled",
+        "duration" : "15",
+        "price" : "2100",
+        "specialization" : "Ortoped",
+        "branch" : "Ortopedija",
+        "doctors" : ["jasmina", "una"],
+        "accepted" : true	
+    },
+    {
+        "name" : "Radiografija (X-zraci)",
+        "duration" : "10",
+        "price" : "1600",
+        "specialization" : "Ortoped",
+        "branch" : "Ortopedija",
+        "doctors" : ["jasmina"],
+        "accepted" : true	
+    },
+    {
+        "name" : "Magnetna rezonanca (MR)",
+        "duration" : "60",
+        "price" : "12500",
+        "specialization" : "Ortoped",
+        "branch" : "Ortopedija",
+        "doctors" : ["jasmina", "una"],
+        "accepted" : true
+    },
+    {
+        "name" : "Ginekološki pregled",
+        "duration" : "20",
+        "price" : "1700",
+        "specialization" : "Ginekolog",
+        "branch" : "Ginekologija",
+        "doctors" : ["ivan"],
+        "accepted" : true	
+    },
+    {
+        "name" : "Papa test (PAPA bris)",
+        "duration" : "5",
+        "price" : "1800",
+        "specialization" : "Ginekolog",
+        "branch" : "Ginekologija",
+        "doctors" : ["ivan"],
+        "accepted" : true	
+    },
+    {
+        "name" : "Ultrazvuk zdjelice",
+        "duration" : "20",
+        "price" : "4200",
+        "specialization" : "Ginekolog",
+        "branch" : "Ginekologija",
+        "doctors" : ["ivan"],
+        "accepted" : true	
+    },
+    {
+        "name" : "Oftalmološki pregled",
+        "duration" : "15",
+        "price" : "1500",
+        "specialization" : "Oftalmolog",
+        "branch" : "Oftalmologija",
+        "doctors" : ["ivana"],
+        "accepted" : true	
+    },
+    {
+        "name" : "Tonometrija",
+        "duration" : "10",
+        "price" : "2000",
+        "specialization" : "Oftalmolog",
+        "branch" : "Oftalmologija",
+        "doctors" : ["ivana"],
+        "accepted" : true	
+    },
+    {
+        "name" : "Dijagnostička širenja zenica",
+        "duration" : "30",
+        "price" : "2000",
+        "specialization" : "Oftalmolog",
+        "branch" : "Oftalmologija",
+        "doctors" : ["ivana"],
+        "accepted" : true	
+    }
+]

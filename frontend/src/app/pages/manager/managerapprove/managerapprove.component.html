@@ -1,0 +1,70 @@
+<body>
+    <div class="container-fluid">
+        <div class="w-100 p-3">
+          <app-header></app-header>
+        </div>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+            <div class="container-fluid" >
+                <div class="row">
+                    <div class="col-sm">
+                      <h1 style="color: #3b3c3d;">Zahtevi:</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <span *ngIf="show">
+            <nav class="navbar navbar-expand-lg transparent-navbar custom">
+                <div class="container-fluid">
+                    <div class="row text-center" style="margin: 0 auto">
+                        <h5><span class="name" style="color: #3b3c3d;">{{word}} korisnika {{firstname}} {{lastname}}?</span></h5>
+                        <div class="col-sm">
+                            <button type="button" (click)="action()" class="btn red">Da</button>
+                        </div>
+                        <div class="col-sm">
+                            <button type="button" (click)="no()" class="btn black">Ne</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </span>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+          <div class="container-fluid" >
+            <div class="row text-center">
+              <div class="col-sm text-center" *ngFor="let patient of patients">
+                  <div class="card" style="width: 18rem;">
+                    <div class="shadow">
+                        <span *ngIf="patient.img != 'defaultUser.jpg'">
+                            <img src="http://localhost:4000/uploads/patient_images/{{patient.img}}" class="card-img-top" width="100%" alt="Profile image">
+                        </span>
+                        <span *ngIf="patient.img == 'defaultUser.jpg'">
+                            <img src="../../../../../assets/images/defaultUser.jpg" class="card-img-top" width="100%"  style="border-radius: 15px;" alt="Profile image">
+                        </span>
+                    </div>
+                    <div class="shadow">
+                        <div class="card-body patientCard">
+                            <h4 class="card-title">{{patient.firstname}} {{patient.lastname}}</h4>
+                            <p class="card-text"><span style="color: #91051f; font-weight: bold;">Korisničko ime: </span>{{patient.username}}</p>
+                            <p class="card-text"><span style="color: #91051f; font-weight: bold;">Lozinka: </span>{{patient.password}}</p>
+                            <p class="card-text"><span style="color: #91051f; font-weight: bold;">Adresa: </span>{{patient.address}}</p>
+                            <p class="card-text"><span style="color: #91051f; font-weight: bold;">Telefon: </span>{{patient.phone}}</p>
+                            <p class="card-text"><span style="color: #91051f; font-weight: bold;">Email: </span>{{patient.email}}</p>
+                            <p class="card-text"><span style="color: #91051f; font-weight: bold;">Status: </span>{{getStatus(patient.status)}}</p>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <button type="button" (click)="accept(patient.firstname, patient.lastname, patient.username)" class="btn black">Prihvati</button>
+                                </div>
+                                <div class="col-sm">
+                                    <button type="button" (click)="denny(patient.firstname, patient.lastname, patient.username)" class="btn red">Odbij</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </div>
+</body>
+
+

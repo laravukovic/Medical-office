@@ -1,0 +1,50 @@
+[
+    {
+        "username" : "pera",
+        "password" : "Pera123@",
+        "firstname" : "Pera",
+		"lastname" : "Petrović",
+		"address" : "Srbija, Beograd, Kneza Miloša 12",
+		"phone" : "0611231237",
+		"email" : "pera@gmail.com",
+		"img" : "pera.jpg",
+		"status" : "accepted",
+		"type" : "patient"
+    },
+	{
+        "username" : "mika",
+        "password" : "Mika123@",
+        "firstname" : "Mika",
+		"lastname" : "Mikić",
+		"address" : "Srbija, Novi Sad, Bulevar Oslobođenja 44",
+		"phone" : "0624564569",
+		"email" : "mika@gmail.com",
+		"img" : "mika.jpg",
+		"status" : "accepted",
+		"type" : "patient"
+    },
+	{
+        "username" : "ana",
+        "password" : "Ana1234@",
+        "firstname" : "Ana",
+		"lastname" : "Anić",
+		"address" : "Srbija, Niš, Obrenovićeva 8",
+		"phone" : "0637897891",
+		"email" : "ana@gmail.com",
+		"img" : "ana.jpg", 
+		"status" : "accepted",
+		"type" : "patient"
+    },
+	{
+        "username" : "zika",
+        "password" : "Zika123@",
+        "firstname" : "Žika",
+		"lastname" : "Žikić",
+		"address" : "Srbija, Kragujevac, Kralja Petra I 25",
+		"phone" : "0641112226",
+		"email" : "zika@gmail.com",
+		"img" : "zika.jpg",
+		"status" : "accepted",
+		"type" : "patient"
+    }	
+]

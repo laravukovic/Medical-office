@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "650a3c674b5a652836e5ad79"
+  },
+  "username": "pera",
+  "password": "Pera123@",
+  "firstname": "Pera",
+  "lastname": "Petrović",
+  "address": "Srbija, Beograd, Kneza Miloša 12",
+  "phone": "0611231237",
+  "email": "pera@gmail.com",
+  "img": "pera.jpg",
+  "status": "accepted",
+  "type": "patient"
+},
+{
+  "_id": {
+    "$oid": "650a3c674b5a652836e5ad7a"
+  },
+  "username": "mika",
+  "password": "Mika123@",
+  "firstname": "Mika",
+  "lastname": "Mikić",
+  "address": "Srbija, Novi Sad, Bulevar Oslobođenja 44",
+  "phone": "0624564569",
+  "email": "mika@gmail.com",
+  "img": "mika.jpg",
+  "status": "accepted",
+  "type": "patient"
+},
+{
+  "_id": {
+    "$oid": "650a3c674b5a652836e5ad7b"
+  },
+  "username": "ana",
+  "password": "Ana1234@",
+  "firstname": "Ana",
+  "lastname": "Anić",
+  "address": "Srbija, Niš, Obrenovićeva 8",
+  "phone": "0637897891",
+  "email": "ana@gmail.com",
+  "img": "ana.jpg",
+  "status": "accepted",
+  "type": "patient"
+},
+{
+  "_id": {
+    "$oid": "650a3c674b5a652836e5ad7c"
+  },
+  "username": "zika",
+  "password": "Zika123@",
+  "firstname": "Žika",
+  "lastname": "Žikić",
+  "address": "Srbija, Kragujevac, Kralja Petra I 25",
+  "phone": "0641112226",
+  "email": "zika@gmail.com",
+  "img": "zika.jpg",
+  "status": "accepted",
+  "type": "patient"
+},
+{
+  "_id": {
+    "$oid": "650a4238819f54fa61f059b1"
+  },
+  "username": "stefan",
+  "password": "Stefan123@",
+  "firstname": "Stefan",
+  "lastname": "Stefanović",
+  "address": "Srbija, Leskovac, Bulevar Oslobođenja 39",
+  "phone": "06288742901",
+  "email": "stefan@gmail.com",
+  "img": "stefan.jpg",
+  "status": "waiting",
+  "type": "patient",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a42a4819f54fa61f059b7"
+  },
+  "username": "slavica",
+  "password": "Slavica123@",
+  "firstname": "Slavica",
+  "lastname": "Slavić",
+  "address": "Srbija, Novi Sad, Bulevar cara Lazara 7",
+  "phone": "06977742985",
+  "email": "slavica@gmail.com",
+  "img": "slavica.jpg",
+  "status": "waiting",
+  "type": "patient",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a4352819f54fa61f059cb"
+  },
+  "username": "misko",
+  "password": "Misko123@",
+  "firstname": "Miško",
+  "lastname": "Mišković",
+  "address": "Srbija, Beograd, Jevrejska ulica 1",
+  "phone": "0637584436",
+  "email": "misko@gmail.com",
+  "img": "defaultUser.jpg",
+  "status": "declined",
+  "type": "patient",
+  "__v": 0
+}]

@@ -1,0 +1,156 @@
+<body>
+  <div class="container-fluid">
+    <div class="w-100 p-3">
+      <app-header></app-header>
+    </div>
+    <nav class="navbar navbar-expand-lg transparent-navbar">
+      <div class="container-fluid" >
+        <div class="row">
+          <div class="col-sm">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" style="box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); border-radius: 15px;">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../../../../assets/images/carousel/gallery1.jpg" class="d-block w-100" alt="img1" style="box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); border-radius: 15px;">
+                </div>
+                <div class="carousel-item">
+                  <img src="../../../../assets/images/carousel/gallery2.jpg" class="d-block w-100" alt="img2" style="box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); border-radius: 15px;">
+                </div>
+                <div class="carousel-item">
+                  <img src="../../../../assets/images/carousel/gallery3.jpg" class="d-block w-100" alt="img3" style="box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); border-radius: 15px;">
+                </div>
+                <div class="carousel-item">
+                  <img src="../../../../assets/images/carousel/gallery4.jpg" class="d-block w-100" alt="img4" style="box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); border-radius: 15px;">
+                </div>
+                <div class="carousel-item">
+                  <img src="../../../../assets/images/carousel/gallery5.jpg" class="d-block w-100" alt="img5" style="box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); border-radius: 15px;">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-sm about">
+            <div class="about-center">
+              <h4 style="margin-bottom: 4%; text-align: center;">U našem gradu postoji vrhunska medicinska ustanova koja pruža specijalizovanu zdravstvenu negu kroz različita odeljenja:</h4>
+              <h6 style="margin-bottom: 4%; margin-left: 2%;"><span class="name">Kardiološka ordinacija: </span>Fokusirana na dijagnostiku i lečenje srčanih oboljenja uz korišćenje najmodernijih tehnologija.</h6>
+              <h6 style="margin-bottom: 4%; margin-left: 2%;"><span class="name">Dermatološka ordinacija: </span>Stručnjaci se brinu o koži, kosi i noktima, nudeći rešenja za različite kožne probleme.</h6>
+              <h6 style="margin-bottom: 4%; margin-left: 2%;"><span class="name">Pedijatrijska ordinacija: </span>Posvećena brizi o deci svih uzrasta kroz redovne kontrole i imunizacije.</h6>
+              <h6 style="margin-bottom: 4%; margin-left: 2%;"><span class="name">Ortopedska ordinacija: </span>Obezbeđuje terapije za rehabilitaciju i olakšavanje bolova u zglobovima i mišićima.</h6>
+              <h6 style="margin-bottom: 4%; margin-left: 2%;"><span class="name">Ginekološka ordinacija: </span>Pruža sveobuhvatne pregleda i tretmane za žensko zdravlje, uključujući prenatalnu negu.</h6>
+              <h6 style="margin-bottom: 4%; margin-left: 2%;"><span class="name">Oftalmološka ordinacija: </span>Dijagnostikuje i leči poremećaje vida, koristeći najsavremeniju opremu.</h6>
+              <h4 style="text-align: center;" >Sve ordinacije rade zajedno kako bi obezbedile holistički pristup zdravlju pacijenata, pružajući stručnost i posvećenost.</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg transparent-navbar">
+      <div class="container-fluid">
+        <div class="row">
+          <h1>Naši stručnjaci:</h1>
+          <div class="col-sm">
+            <h5 style="color: #3b3c3d;">Sortiraj:</h5>
+          </div>
+          <div class="col-sm">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="direction" id="direction1" [(ngModel)]="direction" value="inc">
+              <label class="form-check-label" for="direction1">
+                Rastuće
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="direction" id="direction2" [(ngModel)]="direction" value="desc">
+              <label class="form-check-label" for="direction2">
+                Opadajuće
+              </label>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="type" id="type1" [(ngModel)]="type" value="firstname">
+              <label class="form-check-label" for="type1">
+                Po imenu
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="type" id="type2" [(ngModel)]="type" value="lastname">
+              <label class="form-check-label" for="type2">
+                Po prezimenu
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="type" id="type2" [(ngModel)]="type" value="specialization">
+              <label class="form-check-label" for="type2">
+                Po specijalizaciji
+              </label>
+            </div>
+          </div>
+          <div class="col-sm">
+            <button type="button" (click)="sort()" class="btn">Sortiraj</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg transparent-navbar">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm">
+            <h5 style="color: #3b3c3d;">Pretraži:</h5>
+          </div>
+          <div class="col-sm">
+            <form class="d-flex" role="search">
+              <div class="input-group input-group-sm mb-3">
+                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="searchFiled" placeholder="Ime" [(ngModel)]="firstname">
+              </div>
+            </form>
+          </div>
+          <div class="col-sm">
+            <form class="d-flex" role="search">
+              <div class="input-group input-group-sm mb-3">
+                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="searchFiled" placeholder="Prezime" [(ngModel)]="lastname">
+              </div>
+            </form>
+          </div>
+          <div class="col-sm">
+            <form class="d-flex" role="search">
+              <div class="input-group input-group-sm mb-3">
+                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="searchFiled" placeholder="Specijalizacija" [(ngModel)]="specialization">
+              </div>
+            </form>
+          </div>
+          <div class="col-sm">
+            <button type="button" (click)="search()" class="btn">Pretraga</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg transparent-navbar">
+      <div class="container-fluid" >
+        <div class="row text-center">
+          <div class="col-sm text-center" *ngFor="let doctor of shownDoctors">
+              <div class="card" style="width: 18rem;">
+                <div class="shadow">
+                  <img src="http://localhost:4000/uploads/doctor_images/{{doctor.img}}" class="card-img-top" alt="Slika doktora">
+                </div>
+                <div class="shadow">
+                    <div class="card-body">
+                        <h4 class="card-title">{{doctor.firstname}} {{doctor.lastname}}</h4>
+                        <h6 class="card-text" style="color :#91051f;">{{doctor.specialization}}</h6>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+</div>
+</body>
+
+
+

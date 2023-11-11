@@ -1,0 +1,97 @@
+<body>
+  <div class="container-fluid">
+    <div class="w-100 p-3">
+      <app-header></app-header>
+    </div>
+    <span *ngIf="!show">
+      <nav class="navbar navbar-expand-lg transparent-navbar">
+        <div class="container-fluid" >
+          <div class="row text-center">
+            <div class="col-sm text-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="shadow">
+                      <span *ngIf="doctor.img != 'defaultUser.jpg'">
+                        <img src="http://localhost:4000/uploads/doctor_images/{{doctor.img}}" class="card-img-top" alt="Doctor image">
+                      </span>
+                      <span *ngIf="doctor.img == 'defaultUser.jpg'">
+                        <img src="../../../../../assets/images/defaultUser.jpg" class="card-img-top" style="border-radius: 15px;" alt="Doctor image">
+                      </span>
+                    </div>
+                    <div class="shadow">
+                        <div class="card-body">
+                            <h4 class="card-title">{{doctor.firstname}} {{doctor.lastname}}</h4>
+                            <h6 class="card-text">{{doctor.specialization}}</h6>
+                            <p class="card-text">{{doctor.branch}}</p>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm text-center" *ngFor="let examination of examinations">
+              <nav class="navbar navbar-expand-lg transparent-navbar">
+                <div class="container-fluid" >
+                  <div class="row text-center">
+                    <div class="card">
+                      <div class="shadow">
+                        <div class="card-body examination">
+                          <h4 class="card-title">{{examination.name}}</h4>
+                          <h6 class="card-text"><span style="color: #636363;">Cena: </span>{{examination.price}} din</h6>
+                          <h6 class="card-text"><span style="color: #636363;">Trajanje: </span>{{examination.duration}} min</h6>
+                          <button type="button" (click)="view(examination.name, examination.price, examination.duration)" class="btn red">Zakaži</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+    </nav>
+    </span>
+    <span *ngIf="show">
+      <nav class="navbar navbar-expand-lg transparent-navbar nav-card">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="row">
+                    <div class="row top-buffer text-center">
+                        <div class="card-body examination">
+                          <h4 class="card-title" style="margin-bottom: 6px;">{{name}}</h4>
+                          <h6 class="card-text"><span style="color: #636363;">Cena: </span>{{price}} <span style="color: #91051f;"> din </span></h6>
+                          <h6 class="card-text"><span style="color: #636363;">Trajanje: </span>{{duration}} <span style="color: #91051f;"> min </span></h6>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                      <div class="col-sm">
+                        <p class="error" style="font-weight: bold;">{{message}}</p>
+                      </div>
+                    </div>
+                    <div class="col-sm">
+                        <h5><span class="name">Datum:</span></h5>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" placeholder="dd.mm.yyyy (dan, mesec, godina)" aria-label="date" aria-describedby="addon-wrapping" [(ngModel)]="date">
+                        </div>
+                    </div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col-sm">
+                        <h5><span class="name">Vreme:</span></h5>
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" placeholder="hh:mm (sati, minuti)" aria-label="time" aria-describedby="addon-wrapping" [(ngModel)]="time">
+                        </div>
+                    </div>
+                </div>
+                <div class="row top-buffer text-center">
+                    <div class="col-sm">
+                        <button type="button" (click)="back()" class="btn black">Nazad</button>
+                    </div>
+                    <div class="col-sm">
+                      <button type="button" (click)="schedule()" class="btn red">Zakaži</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </nav>
+    </span>
+</div>
+</body>
+

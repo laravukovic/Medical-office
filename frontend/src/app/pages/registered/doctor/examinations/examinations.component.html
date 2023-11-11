@@ -1,0 +1,37 @@
+<body>
+    <div class="container-fluid">
+        <div class="w-100 p-3">
+          <app-header></app-header>
+        </div>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+            <div class="container-fluid" >
+                <div class="row">
+                    <div class="col-sm">
+                      <h1 style="color: #3b3c3d;">Moji sledeći pregledi:</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+          <div class="container-fluid" >
+            <div class="row text-center">
+                <div class="col-sm text-center" *ngFor="let schedule of schedules">
+                    <a [routerLink]="['/overwiev']" [queryParams]="{ patient: schedule.user }">
+                        <div class="card" style="width: 18rem;">
+                            <div class="shadow">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{schedule.name}}</h4>
+                                    <h6 class="card-text">{{schedule.date}}, {{schedule.time}}h</h6>
+                                    <p class="card-text"><span class="bold">Pacijent: </span>{{schedule.userFullName}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+          </div>
+        </nav>
+    </div>
+</body>
+
+

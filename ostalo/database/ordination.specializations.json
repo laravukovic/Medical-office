@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "650a3c794b5a652836e5ad96"
+  },
+  "specialization": "Kardiolog",
+  "branch": "Kardiologija"
+},
+{
+  "_id": {
+    "$oid": "650a3c794b5a652836e5ad97"
+  },
+  "specialization": "Dermatolog",
+  "branch": "Dermatologija"
+},
+{
+  "_id": {
+    "$oid": "650a3c794b5a652836e5ad98"
+  },
+  "specialization": "Pedijatar",
+  "branch": "Pedijatrija"
+},
+{
+  "_id": {
+    "$oid": "650a3c794b5a652836e5ad99"
+  },
+  "specialization": "Ortoped",
+  "branch": "Ortopedija"
+},
+{
+  "_id": {
+    "$oid": "650a3c794b5a652836e5ad9a"
+  },
+  "specialization": "Ginekolog",
+  "branch": "Ginekologija"
+},
+{
+  "_id": {
+    "$oid": "650a3c794b5a652836e5ad9b"
+  },
+  "specialization": "Oftalmolog",
+  "branch": "Oftalmologija"
+}]

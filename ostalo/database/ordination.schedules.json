@@ -1,0 +1,377 @@
+[{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adbb"
+  },
+  "name": "Elektrokardiogram (EKG)",
+  "date": "01.10.2023",
+  "time": "12:00",
+  "user": "pera",
+  "doctor": "marko",
+  "branch": "Kardiologija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adbc"
+  },
+  "name": "Ehokardiografija",
+  "date": "02.10.2023",
+  "time": "12:30",
+  "user": "ana",
+  "doctor": "marko",
+  "branch": "Kardiologija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adbd"
+  },
+  "name": "Koronarna angiografija",
+  "date": "01.10.2023",
+  "time": "14:15",
+  "user": "zika",
+  "doctor": "mina",
+  "branch": "Kardiologija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adbe"
+  },
+  "name": "Dermatoskopija",
+  "date": "03.10.2023",
+  "time": "09:00",
+  "user": "mika",
+  "doctor": "filip",
+  "branch": "Dermatologija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adbf"
+  },
+  "name": "Biopsija kože",
+  "date": "03.10.2023",
+  "time": "10:00",
+  "user": "pera",
+  "doctor": "filip",
+  "branch": "Dermatologija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adc0"
+  },
+  "name": "Laser terapija",
+  "date": "02.10.2023",
+  "time": "13:00",
+  "user": "pera",
+  "doctor": "dule",
+  "branch": "Dermatologija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adc1"
+  },
+  "name": "Redovan pedijatrijski pregled",
+  "date": "02.10.2023",
+  "time": "08:00",
+  "user": "ana",
+  "doctor": "milica",
+  "branch": "Pedijatrija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adc2"
+  },
+  "name": "Pregled i vakcinacija novorođenčeta",
+  "date": "01.10.2023",
+  "time": "12:15",
+  "user": "zika",
+  "doctor": "lazar",
+  "branch": "Pedijatrija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adc3"
+  },
+  "name": "Pregled razvoja deteta",
+  "date": "01.11.2023",
+  "time": "16:00",
+  "user": "pera",
+  "doctor": "lazar",
+  "branch": "Pedijatrija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adc4"
+  },
+  "name": "Ortopedski pregled",
+  "date": "02.11.2023",
+  "time": "18:00",
+  "user": "mika",
+  "doctor": "una",
+  "branch": "Ortopedija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adc5"
+  },
+  "name": "Radiografija (X-zraci)",
+  "date": "02.11.2023",
+  "time": "10:45",
+  "user": "ana",
+  "doctor": "jasmina",
+  "branch": "Ortopedija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adc6"
+  },
+  "name": "Magnetna rezonanca (MR)",
+  "date": "03.11.2023",
+  "time": "13:00",
+  "user": "zika",
+  "doctor": "jasmina",
+  "branch": "Ortopedija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adc7"
+  },
+  "name": "Ginekološki pregled",
+  "date": "01.01.2024",
+  "time": "15:30",
+  "user": "ana",
+  "doctor": "ivan",
+  "branch": "Ginekologija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adc8"
+  },
+  "name": "Elektrokardiogram (EKG)",
+  "date": "01.07.2023",
+  "time": "12:00",
+  "user": "ana",
+  "doctor": "marko",
+  "branch": "Kardiologija",
+  "report": true
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adc9"
+  },
+  "name": "Oftalmološki pregled",
+  "date": "01.07.2023",
+  "time": "14:00",
+  "user": "ana",
+  "doctor": "ivana",
+  "branch": "Oftalmologija",
+  "report": true
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adca"
+  },
+  "name": "Elektrokardiogram (EKG)",
+  "date": "01.08.2023",
+  "time": "12:00",
+  "user": "ana",
+  "doctor": "marko",
+  "branch": "Kardiologija",
+  "report": true
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adcb"
+  },
+  "name": "Elektrokardiogram (EKG)",
+  "date": "21.09.2023",
+  "time": "23:45",
+  "user": "zika",
+  "doctor": "marko",
+  "branch": "Kardiologija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adcc"
+  },
+  "name": "Elektrokardiogram (EKG)",
+  "date": "21.09.2023",
+  "time": "18:00",
+  "user": "mika",
+  "doctor": "marko",
+  "branch": "Kardiologija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a49c54b5a652836e5adcd"
+  },
+  "name": "Oftalmološki pregled",
+  "date": "21.09.2023",
+  "time": "09:00",
+  "user": "mika",
+  "doctor": "ivana",
+  "branch": "Oftalmologija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a5f8d1bbc096ea2f46f3a"
+  },
+  "name": "Magnetna rezonanca (MR)",
+  "date": "23.10.2023",
+  "time": "14:00",
+  "user": "pera",
+  "doctor": "una",
+  "branch": "Ortopedija",
+  "report": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a5ff81bbc096ea2f46f59"
+  },
+  "name": "Tonometrija",
+  "date": "23.10.2023",
+  "time": "14:30",
+  "user": "ana",
+  "doctor": "ivana",
+  "branch": "Oftalmologija",
+  "report": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a60381bbc096ea2f46f74"
+  },
+  "name": "Pregled i vakcinacija novorođenčeta",
+  "date": "02.11.2023",
+  "time": "16:15",
+  "user": "mika",
+  "doctor": "lazar",
+  "branch": "Pedijatrija",
+  "report": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a607e1bbc096ea2f46f83"
+  },
+  "name": "Magnetna rezonanca (MR)",
+  "date": "24.10.2023",
+  "time": "17:30",
+  "user": "mika",
+  "doctor": "una",
+  "branch": "Ortopedija",
+  "report": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a60b91bbc096ea2f46f9d"
+  },
+  "name": "Biopsija kože",
+  "date": "24.10.2023",
+  "time": "14:00",
+  "user": "zika",
+  "doctor": "filip",
+  "branch": "Dermatologija",
+  "report": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "650a68934b5a652836e5ae10"
+  },
+  "name": "Biopsija kože",
+  "date": "17.03.2023",
+  "time": "14:00",
+  "user": "zika",
+  "doctor": "filip",
+  "branch": "Dermatologija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a68934b5a652836e5ae11"
+  },
+  "name": "Pregled i vakcinacija novorođenčeta",
+  "date": "02.02.2023",
+  "time": "16:15",
+  "user": "mika",
+  "doctor": "lazar",
+  "branch": "Pedijatrija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a68934b5a652836e5ae12"
+  },
+  "name": "Tonometrija",
+  "date": "23.03.2023",
+  "time": "14:30",
+  "user": "ana",
+  "doctor": "ivana",
+  "branch": "Oftalmologija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a68934b5a652836e5ae13"
+  },
+  "name": "Elektrokardiogram (EKG)",
+  "date": "21.09.2023",
+  "time": "18:00",
+  "user": "mika",
+  "doctor": "marko",
+  "branch": "Kardiologija",
+  "report": false
+},
+{
+  "_id": {
+    "$oid": "650a68934b5a652836e5ae14"
+  },
+  "name": "Oftalmološki pregled",
+  "date": "01.05.2023",
+  "time": "14:00",
+  "user": "mika",
+  "doctor": "ivana",
+  "branch": "Oftalmologija",
+  "report": true
+},
+{
+  "_id": {
+    "$oid": "650a68934b5a652836e5ae15"
+  },
+  "name": "Magnetna rezonanca (MR)",
+  "date": "23.05.2023",
+  "time": "20:00",
+  "user": "pera",
+  "doctor": "una",
+  "branch": "Ortopedija",
+  "report": true
+},
+{
+  "_id": {
+    "$oid": "650a68934b5a652836e5ae16"
+  },
+  "name": "Biopsija kože",
+  "date": "02.02.2023",
+  "time": "18:00",
+  "user": "ana",
+  "doctor": "filip",
+  "branch": "Dermatologija",
+  "report": false
+}]

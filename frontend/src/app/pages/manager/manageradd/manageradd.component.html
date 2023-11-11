@@ -1,0 +1,123 @@
+<div class="container-fluid">
+    <div class="w-100 p-3">
+        <app-header></app-header>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-header">
+                    <p class="card-title">Registracija doktora</p>
+                </div>
+                <div class="shadow">
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <p class="error">{{message}}</p>
+                                </div>
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-sm">
+                                    <div class="input-group flex-nowrap">
+                                        <input type="text" class="form-control" placeholder="Korisničko ime" aria-label="Username" aria-describedby="addon-wrapping" [(ngModel)]="username">
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-sm">
+                                    <div class="input-group flex-nowrap">
+                                        <input type="password" class="form-control" placeholder="Lozinka" aria-label="Password" aria-describedby="addon-wrapping" [(ngModel)]="password">
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-sm">
+                                    <div class="input-group flex-nowrap">
+                                        <input type="password" class="form-control" placeholder="Ponovljena Lozinka" aria-label="Repeat Password" aria-describedby="addon-wrapping" [(ngModel)]="repeatPassword">
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-sm">
+                                    <div class="input-group flex-nowrap">
+                                        <input type="text" class="form-control" placeholder="Ime" aria-label="Frstname" aria-describedby="addon-wrapping" [(ngModel)]="firstname">
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-sm">
+                                    <div class="input-group flex-nowrap">
+                                        <input type="text" class="form-control" placeholder="Prezime" aria-label="Lastname" aria-describedby="addon-wrapping" [(ngModel)]="lastname">
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-sm">
+                                    <div class="input-group flex-nowrap">
+                                        <input type="text" class="form-control" placeholder="Kontakt telefon" aria-label="Phone" aria-describedby="addon-wrapping" [(ngModel)]="phone">
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-sm">
+                                    <div class="input-group flex-nowrap">
+                                        <input type="text" class="form-control" placeholder="Država, grad, ulica i broj" aria-label="Address" aria-describedby="addon-wrapping" [(ngModel)]="address">
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-sm">
+                                    <div class="input-group flex-nowrap">
+                                        <input type="text" class="form-control" placeholder="Email adresa" aria-label="Email" aria-describedby="addon-wrapping" [(ngModel)]="email">
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-sm">
+                                    <div class="input-group flex-nowrap">
+                                        <input type="text" class="form-control" placeholder="Licenca" aria-label="License" aria-describedby="addon-wrapping" [(ngModel)]="license">
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-sm">
+                                    <h5><span class="name">Specijalizacija:</span></h5>
+                                    <select [(ngModel)]="selectedOption" (change)="onOptionSelected(selectedOption)">
+                                        <option *ngFor="let option of options" [value]="option">{{option}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-sm">
+                                    <h5><span class="name">Ogranak:</span></h5>
+                                    <div class="input-group flex-nowrap">
+                                        <input type="text" class="form-control" placeholder="" aria-label="branch" aria-describedby="addon-wrapping" [(ngModel)]="branch" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row top-buffer">
+                                <div class="col-sm">
+                                    <div class="form-group col">
+                                        <label for="userImage" class="custom-file-label">{{userImage != null ? userImage.name : "Slika:"}}</label>
+                                        <input type="file" id="userImage" class="form-control custom-file" name="userImage"
+                                          (change)="onFileSelected($event)"
+                                        />
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="row top-buffer text-center">
+                                <div class="col-sm">
+                                    <button type="button" (click)="register()" class="btn">Registruj</button>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  

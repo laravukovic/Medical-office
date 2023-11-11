@@ -1,0 +1,92 @@
+.transparent-navbar {
+  background-color: transparent !important; /* Use !important to ensure this style takes precedence */
+  border: none !important; /* Remove any border */
+}
+
+nav {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.custom {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.col-sm {
+    margin-top: 15px;
+}
+
+.carousel {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+.carousel-img {
+    border-radius: 15px;
+}
+
+h5 {
+    color: #3b3c3d;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.name {
+    color: #91051f;
+    font-weight: bold;
+}
+
+.about {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+.black {
+    background-color: black;
+    color: #eeeeee;
+}
+
+.black:hover {
+    background-color: rgb(109, 107, 107);
+}
+
+.red {
+    background-color: #91051f;
+    color: #eeeeee;
+}
+
+.red:hover {
+    background-color: #e67e86;
+}
+
+.form-control:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 0.2rem rgba(0, 2, 3, 0.5);
+}
+
+.top-buffer {
+    margin-top: 2%;
+}
+
+.form-control:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 0.2rem rgba(0, 2, 3, 0.5);
+}
+
+.nav-card {
+    width: 24%;
+    margin: 0 auto;
+}
+
+.error {
+    color:#c30e2e;
+    font-weight: bold;
+}
+

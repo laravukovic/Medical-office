@@ -1,0 +1,260 @@
+<body>
+    <div class="container-fluid">
+        <div class="w-100 p-3">
+          <app-header></app-header>
+        </div>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+            <div class="container-fluid" >
+                <div class="row">
+                    <div class="col-sm">
+                      <h1 style="color: #3b3c3d;">Zahtevani pregledi lekara:</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <span *ngIf="show">
+            <nav class="navbar navbar-expand-lg transparent-navbar custom">
+                <div class="container-fluid">
+                    <div class="row text-center" style="margin: 0 auto">
+                        <h5><span class="name" style="color: #3b3c3d;">{{word}} pregled: {{name}}?</span></h5>
+                        <div class="col-sm">
+                            <button type="button" (click)="action()" class="btn red">Da</button>
+                        </div>
+                        <div class="col-sm">
+                            <button type="button" (click)="no()" class="btn black">Ne</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </span>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+          <div class="container-fluid" >
+            <div class="row text-center">
+              <div class="col-sm text-center" *ngFor="let examination of examinations">
+                  <div class="card" style="width: 18rem;">
+                    <div class="shadow">
+                        <div class="card-body patientCard">
+                            <h4 class="card-title">{{examination.name}}</h4>
+                            <p class="card-text"><span style="color: #91051f; font-weight: bold;">Trajanje: </span>{{examination.duration}}</p>
+                            <p class="card-text"><span style="color: #91051f; font-weight: bold;">Cena: </span>{{examination.price}}</p>
+                            <p class="card-text"><span style="color: #91051f; font-weight: bold;">Specijalizacija: </span>{{examination.specialization}}</p>
+                            <p class="card-text"><span style="color: #91051f; font-weight: bold;">Ogranak: </span>{{examination.branch}}</p>
+                            <p class="card-text"><span style="color: #91051f; font-weight: bold;">Doktori: </span>{{examination.doctors}}</p>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <button type="button" (click)="accept(examination.name, examination.duration, examination.price, examination.specialization, examination.branch, examination.doctors)" class="btn black">Prihvati</button>
+                                </div>
+                                <div class="col-sm">
+                                    <button type="button" (click)="denny(examination.name, examination.duration, examination.price, examination.specialization, examination.branch, examination.doctors)" class="btn red">Odbij</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+            <div class="container-fluid" >
+                <div class="row">
+                    <div class="col-sm">
+                      <h1 style="color: #3b3c3d;">Nova specijalizacija:</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg transparent-navbar nav-card">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="row">
+                        <div class="row top-buffer text-center">
+                            <div class="col-sm">
+                                <p class="error">{{message}}</p>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <h5><span class="name">Specijalizacija:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="" aria-label="Specialization" aria-describedby="addon-wrapping" [(ngModel)]="newSpecialization">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Ogranak:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="" aria-label="Branch" aria-describedby="addon-wrapping" [(ngModel)]="newBranch">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer text-center">
+                        <div class="col-sm">
+                            <button type="button" (click)="addSpecialization()" class="btn red">Dodaj</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+            <div class="container-fluid" >
+                <div class="row">
+                    <div class="col-sm">
+                      <h1 style="color: #3b3c3d;">Dodaj, ažuriraj, briši preglede:</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+            <div class="container-fluid" >
+                <div class="row">
+                    <div class="col-sm">
+                        <h4>Izaberi specijalizaciju: </h4>
+                    </div>
+                    <div class="col-sm">
+                        <select [(ngModel)]="selectedOption" (change)="onOptionSelected(selectedOption)">
+                            <option *ngFor="let option of options" [value]="option">{{option}}</option>
+                        </select>
+                    </div>
+                    <div class="col-sm">
+                        <span *ngIf="specBool"><button type="button" (click)="addShow()" class="btn black">Dodaj</button> </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <span *ngIf="addBool">
+            <nav class="navbar navbar-expand-lg transparent-navbar nav-card">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="row text-center">
+                            <div class="col-sm">
+                                <p class="error">{{message}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <h5><span class="name">Naziv:</span></h5>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" placeholder="" aria-label="name" aria-describedby="addon-wrapping" [(ngModel)]="nameForm">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row top-buffer">
+                            <div class="col-sm">
+                                <h5><span class="name">Trajanje:</span></h5>
+                                <div class="input-group flex-nowrap">
+                                    <input type="number" class="form-control" placeholder="" aria-label="duration" aria-describedby="addon-wrapping" [(ngModel)]="durationForm">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row top-buffer">
+                            <div class="col-sm">
+                                <h5><span class="name">Cena:</span></h5>
+                                <div class="input-group flex-nowrap">
+                                    <input type="number" class="form-control" placeholder="" aria-label="price" aria-describedby="addon-wrapping" [(ngModel)]="priceForm">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row top-buffer">
+                            <div class="col-sm">
+                                <h5><span class="name">Specializacija:</span></h5>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" placeholder="{{selectedOption}}" aria-label="branch" aria-describedby="addon-wrapping" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row top-buffer">
+                            <div class="col-sm">
+                                <h5><span class="name">Ogranak:</span></h5>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" placeholder="{{branchForm}}" aria-label="branch" aria-describedby="addon-wrapping" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row top-buffer text-center">
+                            <div class="col-sm">
+                                <button type="button" (click)="add()" class="btn red">Unesi</button>
+                            </div>
+                            <div class="col-sm">
+                                <button type="button" (click)="addHide()" class="btn black">Odustani</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </span>
+        <span *ngIf="updateBool">
+            <nav class="navbar navbar-expand-lg transparent-navbar nav-card" style="margin-bottom: 2%;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="row">
+                            <div class="row top-buffer text-center">
+                                <div class="col-sm">
+                                    <p class="error">{{message}}</p>
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <h5><span class="name">Cena za pregled '{{selectedName}}':</span></h5>
+                                <div class="input-group flex-nowrap">
+                                    <input type="number" class="form-control" placeholder="{{selectedPrice}}" aria-label="Price" aria-describedby="addon-wrapping" [(ngModel)]="newPrice">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row top-buffer text-center">
+                            <div class="col-sm">
+                                <button type="button" (click)="update()" class="btn red">Izmeni</button>
+                            </div>
+                            <div class="col-sm">
+                                <button type="button" (click)="updateHide()" class="btn black">Odustani</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </span>
+        <span *ngIf="deleteBool">
+            <nav class="navbar navbar-expand-lg transparent-navbar custom" style="margin-top: 2%;margin-bottom: 2%;">
+                <div class="container-fluid">
+                    <div class="row text-center" style="margin: 0 auto">
+                        <h5><span class="name" style="color: #3b3c3d;">Obriši pregled '{{selectedName}}'?</span></h5>
+                        <div class="col-sm">
+                            <button type="button" (click)="delete()" class="btn red">Da</button>
+                        </div>
+                        <div class="col-sm">
+                            <button type="button" (click)="deleteHide()" class="btn black">Ne</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </span>
+        <span *ngIf="specBool">
+            <nav class="navbar navbar-expand-lg transparent-navbar custom">
+                <div class="container-fluid" >
+                  <div class="row text-center">
+                      <div class="col-sm text-center" *ngFor="let examination of optionExaminations">
+                          <div class="card" style="width: 18rem;">
+                              <div class="shadow">
+                                  <div class="card-body">
+                                      <h4 class="card-title">{{examination.name}}</h4>
+                                      <h6 class="card-text">{{examination.duration}} min, {{examination.price}} din</h6>
+                                      <div class="row">
+                                        <div class="col-sm">
+                                            <button type="button" (click)="updateShow(examination.name, examination.price)" class="btn black">Ažuriraj</button>
+                                        </div>
+                                        <div class="col-sm">
+                                            <button type="button" (click)="deleteShow(examination.name)" class="btn red">Obriši</button>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </nav>
+        </span>
+    </div>
+</body>
+
+
+

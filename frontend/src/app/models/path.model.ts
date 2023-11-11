@@ -1,0 +1,1 @@
+export const myLocalHost = "http://localhost:8080/"

@@ -1,0 +1,229 @@
+<body>
+  <span *ngIf="registered == 'no'">
+    <div class="shadow">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <img src="../../../assets/images/logo.png" alt="Radionice" width="50" height="45">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <span *ngIf="activePage == 'Home'">
+                  <a routerLink="/" class="nav-link active" aria-current="page">Početna</a>
+                </span>
+                <span *ngIf="activePage != 'Home'">
+                  <a routerLink="/" class="nav-link" aria-current="page">Početna</a>
+                </span>
+              </li>
+              <li class="nav-item">
+                <span *ngIf="activePage == 'Login'">
+                  <a routerLink="/login" class="nav-link active">Prijava</a>
+                </span>
+                <span *ngIf="activePage != 'Login'">
+                  <a routerLink="/login" class="nav-link">Prijava</a>
+                </span>
+              </li>
+              <li class="nav-item">
+                <span *ngIf="activePage == 'Register'">
+                  <a routerLink="/register" class="nav-link active">Registracija</a>
+                </span>
+                <span *ngIf="activePage != 'Register'">
+                  <a routerLink="/register" class="nav-link">Registracija</a>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </span>
+  
+  <span *ngIf="registered == 'yes' && type == 'patient'">
+    <div class="shadow">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <img src="../../../assets/images/logo.png" alt="Radionice" width="40" height="35">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <span *ngIf="activePage == 'Profile'">
+                  <a routerLink="/patient" class="nav-link active">Profil</a>
+                </span>
+                <span *ngIf="activePage != 'Profile'">
+                  <a routerLink="/patient" class="nav-link">Profil</a>
+                </span>
+              </li>
+              <li class="nav-item">
+                <span *ngIf="activePage == 'Doctors'">
+                  <a routerLink="/doctors" class="nav-link active">Lekari</a>
+                </span>
+                <span *ngIf="activePage != 'Doctors'">
+                  <a routerLink="/doctors" class="nav-link">Lekari</a>
+                </span>
+              </li>
+              <li class="nav-item">
+                <span *ngIf="activePage == 'Reports'">
+                  <a routerLink="/reports" class="nav-link active">Pregledi</a>
+                </span>
+                <span *ngIf="activePage != 'Reports'">
+                  <a routerLink="/reports" class="nav-link">Pregledi</a>
+                </span>
+              </li>
+              <li class="nav-item">
+                <a (click)="logout()" class="nav-link" style="cursor: pointer;">Izloguj se</a>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </span>
+  
+  
+  <span *ngIf="registered == 'yes' && type == 'doctor'">
+    <div class="shadow">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <img src="../../../assets/images/logo.png" alt="Radionice" width="40" height="35">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <span *ngIf="activePage == 'Profile'">
+                  <a routerLink="/doctor" class="nav-link active">Profil</a>
+                </span>
+                <span *ngIf="activePage != 'Profile'">
+                  <a routerLink="/doctor" class="nav-link">Profil</a>
+                </span>
+              </li>
+              <li class="nav-item">
+                <span *ngIf="activePage == 'Examinations'">
+                  <a routerLink="/examinations" class="nav-link active">Pregledi</a>
+                </span>
+                <span *ngIf="activePage != 'Examinations'">
+                  <a routerLink="/examinations" class="nav-link">Pregledi</a>
+                </span>
+              </li>
+              <li class="nav-item">
+                <span *ngIf="activePage == 'Various'">
+                  <a routerLink="/various" class="nav-link active">Razno</a>
+                </span>
+                <span *ngIf="activePage != 'Various'">
+                  <a routerLink="/various" class="nav-link">Razno</a>
+                </span>
+              </li>
+              <li class="nav-item">
+                  <a (click)="logout()" class="nav-link" style="cursor: pointer;">Izloguj se</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </span>
+  
+  
+  <span *ngIf="registered == 'yes' && type == 'manager'">
+    <div class="shadow">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <img src="../../../assets/images/logo.png" alt="Radionice" width="40" height="35">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <span *ngIf="activePage == 'Managerusers'">
+                  <a routerLink="/managerusers" class="nav-link active">Korisnici</a>
+                </span>
+                <span *ngIf="activePage != 'Managerusers'">
+                  <a routerLink="/managerusers" class="nav-link">Korisnici</a>
+                </span>
+              </li>
+              <li class="nav-item">
+                <span *ngIf="activePage == 'Manageradd'">
+                  <a routerLink="/manageradd" class="nav-link active">Dodaj</a>
+                </span>
+                <span *ngIf="activePage != 'Manageradd'">
+                  <a routerLink="/manageradd" class="nav-link">Dodaj</a>
+                </span>
+              </li>
+              <li class="nav-item">
+                <span *ngIf="activePage == 'Managerapprove'">
+                  <a routerLink="/managerapprove" class="nav-link active">Zahtevi</a>
+                </span>
+                <span *ngIf="activePage != 'Managerapprove'">
+                  <a routerLink="/managerapprove" class="nav-link">Zahtevi</a>
+                </span>
+              </li>
+              <li class="nav-item">
+                <span *ngIf="activePage == 'Managerrequests'">
+                  <a routerLink="/managerrequests" class="nav-link active">Pregledi</a>
+                </span>
+                <span *ngIf="activePage != 'Managerrequests'">
+                  <a routerLink="/managerrequests" class="nav-link">Pregledi</a>
+                </span>
+              </li>
+              <li class="nav-item">
+                <span *ngIf="activePage == 'Managerpass'">
+                  <a routerLink="/managerpass" class="nav-link active">Promena lozinke</a>
+                </span>
+                <span *ngIf="activePage != 'Managerpass'">
+                  <a routerLink="/managerpass" class="nav-link">Promena lozinke</a>
+                </span>
+              </li>
+              <li class="nav-item">
+                  <a (click)="logout()" class="nav-link" style="cursor: pointer;">Izloguj se</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </span>
+
+  <span *ngIf="registered == 'manager'">
+    <div class="shadow">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <img src="../../../assets/images/logo.png" alt="Ordinacija" width="40" height="35">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <span *ngIf="activePage == 'Manager'">
+                  <a routerLink="/manager" class="nav-link active">Menadžer</a>
+                </span>
+                <span *ngIf="activePage != 'Manager'">
+                  <a routerLink="/manager" class="nav-link">Menadžer</a>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </span>
+  
+  
+</body>

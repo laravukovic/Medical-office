@@ -1,0 +1,212 @@
+<div class="container-fluid">
+    <div class="w-100 p-3">
+      <app-header></app-header>
+    </div>
+    <nav class="navbar navbar-expand-lg transparent-navbar">
+      <div class="container-fluid" >
+        <div class="row">
+          <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <div class="shadow">
+                    <span *ngIf="doctor.img != 'defaultUser.jpg'">
+                        <img src="http://localhost:4000/uploads/doctor_images/{{doctor.img}}" class="card-img-top" width="100%" height="425" alt="Profile image">
+                      </span>
+                      <span *ngIf="doctor.img == 'defaultUser.jpg'">
+                        <img src="../../../../../assets/images/defaultUser.jpg" class="card-img-top" width="100%" height="425" style="border-radius: 15px;" alt="Profile image">
+                      </span>
+                </div>
+            </div>
+          </div>
+          <div class="col-sm about">
+            <div class="about-center">
+              <h5 style="margin-top: 8%;"><span class="name">Ime: </span>{{doctor.firstname}}</h5>
+              <h5 style="margin-top: 8%;"><span class="name">Prezime: </span>{{doctor.lastname}}</h5>
+              <h5 style="margin-top: 8%;"><span class="name">Adresa: </span>{{doctor.address}}</h5>
+              <h5 style="margin-top: 8%;"><span class="name">Email: </span>{{doctor.email}}</h5>
+              <h5 style="margin-top: 8%;"><span class="name">Telefon: </span>{{doctor.phone}}</h5>
+              <h5 style="margin-top: 8%;"><span class="name">Licenca: </span>{{doctor.license}}</h5>
+              <h5 style="margin-top: 8%;"><span class="name">Specijalizacija: </span>{{doctor.specialization}}</h5>
+              <h5 style="margin-top: 8%; margin-bottom: 8%;"><span class="name">Ogranak: </span>{{doctor.branch}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg transparent-navbar custom">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm">
+                    <button type="button" (click)="showUpdate()" class="btn black">Ažuriraj</button>
+                </div>
+                <div class="col-sm">
+                    <button type="button" (click)="showChangePassword()" class="btn black">Lozinka</button>
+                </div>
+                <div class="col-sm">
+                    <button type="button" (click)="showLogout()" class="btn red">Izloguj</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <span *ngIf="updateBool">
+        <nav class="navbar navbar-expand-lg transparent-navbar nav-card">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-sm">
+                            <h5><span class="name">Ime:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="{{doctor.firstname}}" aria-label="Firstname" aria-describedby="addon-wrapping" [(ngModel)]="firstname">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Prezime:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="{{doctor.lastname}}" aria-label="Lastname" aria-describedby="addon-wrapping" [(ngModel)]="lastname">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Adresa:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="{{doctor.address}}" aria-label="Address" aria-describedby="addon-wrapping" [(ngModel)]="address">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Licenca:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="{{doctor.license}}" aria-label="License" aria-describedby="addon-wrapping" [(ngModel)]="license">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Telefon:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="{{doctor.phone}}" aria-label="Phone" aria-describedby="addon-wrapping" [(ngModel)]="phone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Specijalizacija:</span></h5>
+                            <select [(ngModel)]="selectedOption" (change)="onOptionSelected(selectedOption)">
+                                <option *ngFor="let option of options" [value]="option">{{option}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Slika:</span></h5>
+                            <div class="form-group col">
+                                <input type="file" id="userImage" class="form-control custom-file" name="userImage"
+                                  (change)="onFileSelected($event)"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer text-center">
+                        <div class="col-sm">
+                            <button type="button" (click)="update()" class="btn black">Izmeni</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </span>
+    <span *ngIf="changePasswordBool">
+        <nav class="navbar navbar-expand-lg transparent-navbar nav-card">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="row">
+                        <div class="row top-buffer text-center">
+                            <div class="col-sm">
+                                <p class="error">{{message}}</p>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <h5><span class="name">Stara lozinka:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="password" class="form-control" placeholder="" aria-label="Password" aria-describedby="addon-wrapping" [(ngModel)]="oldPass">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Nova lozinka:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="password" class="form-control" placeholder="" aria-label="Password1" aria-describedby="addon-wrapping" [(ngModel)]="newPass">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Ponovljena nova lozinka:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="password" class="form-control" placeholder="" aria-label="Password2" aria-describedby="addon-wrapping" [(ngModel)]="repeatPass">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer text-center">
+                        <div class="col-sm">
+                            <button type="button" (click)="changePassword()" class="btn black">Izmeni</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </span>
+    <span *ngIf="logoutBool">
+        <nav class="navbar navbar-expand-lg transparent-navbar custom">
+            <div class="container-fluid">
+                <div class="row text-center" style="margin-top: 10%;">
+                    <h5><span class="name" style="color: #3b3c3d;">Izloguj se?</span></h5>
+                    <div class="col-sm">
+                        <button type="button" (click)="logout()" class="btn red">Da</button>
+                    </div>
+                    <div class="col-sm">
+                        <button type="button" (click)="no()" class="btn black">Ne</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </span>
+    <nav class="navbar navbar-expand-lg transparent-navbar custom">
+        <div class="container-fluid" >
+            <div class="row">
+                <div class="col-sm">
+                  <h2 style="color: #3b3c3d;">Odabir pregleda:</h2>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg transparent-navbar custom">
+        <div class="container-fluid" >
+          <div class="row text-center">
+              <div class="col-sm text-center" *ngFor="let examination of examinations">
+                  <div class="card" style="width: 18rem;">
+                      <div class="shadow">
+                          <div class="card-body">
+                              <h4 class="card-title">{{examination.name}}</h4>
+                              <h6 class="card-text">{{examination.duration}} min, {{examination.price}} din</h6>
+                              <span *ngIf="checkIfHis(examination.doctors)"><button type="button" (click)="denny(examination.name)" class="btn red">Ne Obavljaj</button></span>
+                              <span *ngIf="!checkIfHis(examination.doctors)"><button type="button" (click)="accept(examination.name)" class="btn black">Obavljaj</button></span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </nav>
+</div>
+
+
+
+
+
+
+

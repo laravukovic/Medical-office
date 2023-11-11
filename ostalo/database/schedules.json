@@ -1,0 +1,173 @@
+[
+	{
+        "name" : "Elektrokardiogram (EKG)",
+        "date" : "01.10.2023",
+        "time" : "12:00",
+        "user" : "mika",
+        "doctor" : "marko",
+        "branch" : "Kardiologija",
+        "report" : false
+    },
+    {
+        "name" : "Ehokardiografija",
+        "date" : "02.10.2023",
+        "time" : "12:30",
+        "user" : "ana",
+        "doctor" : "marko",
+        "branch" : "Kardiologija",
+        "report" : false
+    },
+    {
+        "name" : "Koronarna angiografija",
+        "date" : "01.10.2023",
+        "time" : "14:15",
+        "user" : "zika",
+        "doctor" : "mina",
+        "branch" : "Kardiologija",
+        "report" : false
+    },
+    {
+        "name" : "Dermatoskopija",
+        "date" : "03.10.2023",
+        "time" : "09:00",
+        "user" : "mika",
+        "doctor" : "filip",
+        "branch" : "Dermatologija",
+        "report" : false
+    },
+    {
+        "name" : "Biopsija kože",
+        "date" : "03.10.2023",
+        "time" : "10:00",
+        "user" : "pera",
+        "doctor" : "filip",
+        "branch" : "Dermatologija",
+        "report" : false
+    },
+    {
+        "name" : "Laser terapija",
+        "date" : "02.10.2023",
+        "time" : "13:00",
+        "user" : "pera",
+        "doctor" : "dule",
+        "branch" : "Dermatologija",
+        "report" : false
+    },
+    {
+        "name" : "Redovan pedijatrijski pregled",
+        "date" : "02.10.2023",
+        "time" : "08:00",
+        "user" : "ana",
+        "doctor" : "milica",
+        "branch" : "Pedijatrija",
+        "report" : false
+    },
+    {
+        "name" : "Pregled i vakcinacija novorođenčeta",
+        "date" : "01.10.2023",
+        "time" : "12:15",
+        "user" : "zika",
+        "doctor" : "lazar",
+        "branch" : "Pedijatrija",
+        "report" : false	
+    },
+    {
+        "name" : "Pregled razvoja deteta",
+        "date" : "01.11.2023",
+        "time" : "16:00",
+        "user" : "pera",
+        "doctor" : "lazar",
+        "branch" : "Pedijatrija",
+        "report" : false
+    },
+    {
+        "name" : "Ortopedski pregled",
+        "date" : "02.11.2023",
+        "time" : "18:00",
+        "user" : "mika",
+        "doctor" : "una",
+        "branch" : "Ortopedija",
+        "report" : false	
+    },
+    {
+        "name" : "Radiografija (X-zraci)",
+        "date" : "02.11.2023",
+        "time" : "10:45",
+        "user" : "ana",
+        "doctor" : "jasmina",
+        "branch" : "Ortopedija",
+        "report" : false	
+    },
+    {
+        "name" : "Magnetna rezonanca (MR)",
+        "date" : "03.11.2023",
+        "time" : "13:00",
+        "user" : "zika",
+        "doctor" : "jasmina",
+        "branch" : "Ortopedija",
+        "report" : false	
+    },
+    {
+        "name" : "Ginekološki pregled",
+        "date" : "01.01.2024",
+        "time" : "15:30",
+        "user" : "ana",
+        "doctor" : "ivan",
+        "branch" : "Ginekologija",
+        "report" : false	
+    },
+    {
+        "name" : "Elektrokardiogram (EKG)",
+        "date" : "01.07.2023",
+        "time" : "12:00",
+        "user" : "ana",
+        "doctor" : "marko",
+        "branch" : "Kardiologija",
+        "report" : true	
+    },
+    {
+        "name" : "Oftalmološki pregled",
+        "date" : "01.07.2023",
+        "time" : "14:00",
+        "user" : "ana",
+        "doctor" : "ivana",
+        "branch" : "Oftalmologija",
+        "report" : true	
+    },
+    {
+        "name" : "Elektrokardiogram (EKG)",
+        "date" : "01.08.2023",
+        "time" : "12:00",
+        "user" : "ana",
+        "doctor" : "marko",
+        "branch" : "Kardiologija",
+        "report" : true	
+    },
+    {
+        "name" : "Elektrokardiogram (EKG)",
+        "date" : "21.09.2023",
+        "time" : "23:45",
+        "user" : "mika",
+        "doctor" : "marko",
+        "branch" : "Kardiologija",
+        "report" : false
+    },
+    {
+        "name" : "Elektrokardiogram (EKG)",
+        "date" : "21.09.2023",
+        "time" : "18:00",
+        "user" : "mika",
+        "doctor" : "marko",
+        "branch" : "Kardiologija",
+        "report" : false	
+    },
+    {
+        "name" : "Oftalmološki pregled",
+        "date" : "21.09.2023",
+        "time" : "09:00",
+        "user" : "mika",
+        "doctor" : "ivana",
+        "branch" : "Oftalmologija",
+        "report" : false	
+    }
+]

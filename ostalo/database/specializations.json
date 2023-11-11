@@ -1,0 +1,26 @@
+[
+	{
+		"specialization" : "Kardiolog",
+		"branch" : "Kardiologija"
+    },
+	{
+		"specialization" : "Dermatolog",
+		"branch" : "Dermatologija"
+    },
+	{
+		"specialization" : "Pedijatar",
+		"branch" : "Pedijatrija"
+    },
+	{
+		"specialization" : "Ortoped",
+		"branch" : "Ortopedija"
+    },
+	{
+		"specialization" : "Ginekolog",
+		"branch" : "Ginekologija"
+    },
+	{
+		"specialization" : "Oftalmolog",
+		"branch" : "Oftalmologija"
+    }
+]

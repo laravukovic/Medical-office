@@ -1,0 +1,283 @@
+<div class="container-fluid">
+    <div class="w-100 p-3">
+      <app-header></app-header>
+    </div>
+    <nav class="navbar navbar-expand-lg transparent-navbar">
+        <div class="container-fluid" >
+            <div class="row">
+                <div class="col-sm">
+                  <h1 style="color: #3b3c3d;">Pacijenti:</h1>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <span *ngIf="updateBoolP">
+        <nav class="navbar navbar-expand-lg transparent-navbar nav-card">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-sm">
+                            <p class="error">{{message}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h5><span class="name">Ime:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="{{firstnameP}}" aria-label="Firstname" aria-describedby="addon-wrapping" [(ngModel)]="firstnameP">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Prezime:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="{{lastnameP}}" aria-label="Lastname" aria-describedby="addon-wrapping" [(ngModel)]="lastnameP">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Adresa:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="{{addressP}}" aria-label="Address" aria-describedby="addon-wrapping" [(ngModel)]="addressP">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Email:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="{{emailP}}" aria-label="Email" aria-describedby="addon-wrapping" [(ngModel)]="emailP">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Telefon:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="{{phoneP}}" aria-label="Phone" aria-describedby="addon-wrapping" [(ngModel)]="phoneP">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Slika:</span></h5>
+                            <div class="form-group col">
+                                <input type="file" id="userImage" class="form-control custom-file" name="userImage"
+                                  (change)="onFileSelected($event)"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer text-center">
+                        <div class="col-sm">
+                            <button type="button" (click)="updatePatient()" class="btn black">Izmeni</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </span>
+    <span *ngIf="deletePatientBool">
+        <nav class="navbar navbar-expand-lg transparent-navbar custom">
+            <div class="container-fluid">
+                <div class="row text-center" style="margin: 0 auto">
+                    <h5><span class="name" style="color: #3b3c3d;">Obriši pacijenta {{patientFirstName}} {{patientLastName}}?</span></h5>
+                    <div class="col-sm">
+                        <button type="button" (click)="deletePatient()" class="btn red">Da</button>
+                    </div>
+                    <div class="col-sm">
+                        <button type="button" (click)="noPatient()" class="btn black">Ne</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </span>
+    <nav class="navbar navbar-expand-lg transparent-navbar">
+      <div class="container-fluid" >
+        <div class="row text-center">
+          <div class="col-sm text-center" *ngFor="let patient of patients">
+              <div class="card" style="width: 18rem;">
+                <div class="shadow">
+                    <span *ngIf="patient.img != 'defaultUser.jpg'">
+                        <img src="http://localhost:4000/uploads/patient_images/{{patient.img}}" class="patientImg" width="100%" alt="Profile image">
+                      </span>
+                      <span *ngIf="patient.img == 'defaultUser.jpg'">
+                        <img src="../../../../../assets/images/defaultUser.jpg" class="patientImg" width="100%" style="border-radius: 15px;" alt="Profile image">
+                    </span>
+                </div>
+                <div class="shadow">
+                    <div class="card-body patientCard">
+                        <h4 class="card-title">{{patient.firstname}} {{patient.lastname}}</h4>
+                        <p class="card-text"><span style="color: #91051f; font-weight: bold;">Korisničko ime: </span>{{patient.username}}</p>
+                        <p class="card-text">
+                            <span style="color: #91051f; font-weight: bold;">Lozinka: </span>
+                            {{ hidePassword(patient.password) }}
+                          </p>
+                          
+                        <p class="card-text"><span style="color: #91051f; font-weight: bold;">Adresa: </span>{{patient.address}}</p>
+                        <p class="card-text"><span style="color: #91051f; font-weight: bold;">Telefon: </span>{{patient.phone}}</p>
+                        <p class="card-text"><span style="color: #91051f; font-weight: bold;">Email: </span>{{patient.email}}</p>
+                        <p class="card-text"><span style="color: #91051f; font-weight: bold;">Status: </span>{{getStatus(patient.status)}}</p>
+                        <div class="row">
+                            <div class="col-sm">
+                                <button type="button" (click)="updatePatientShow( patient.username, patient.firstname, patient.lastname,patient.address, patient.email, patient.phone)" class="btn black">Ažuriraj</button>
+                            </div>
+                            <div class="col-sm">
+                                <button type="button" (click)="deletePatientShow(patient.firstname, patient.lastname, patient.username)" class="btn red">Obriši</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg transparent-navbar">
+        <div class="container-fluid" >
+            <div class="row">
+                <div class="col-sm">
+                  <h1 style="color: #3b3c3d;">Doktori:</h1>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <span *ngIf="updateBoolD">
+        <nav class="navbar navbar-expand-lg transparent-navbar nav-card">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-sm">
+                            <p class="error">{{message}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h5><span class="name">Ime:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="{{firstnameD}}" aria-label="Firstname" aria-describedby="addon-wrapping" [(ngModel)]="firstnameD">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Prezime:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="{{lastnameD}}" aria-label="Lastname" aria-describedby="addon-wrapping" [(ngModel)]="lastnameD">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Adresa:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="{{addressD}}" aria-label="Address" aria-describedby="addon-wrapping" [(ngModel)]="addressD">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Licenca:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="{{licenseD}}" aria-label="License" aria-describedby="addon-wrapping" [(ngModel)]="licenseD">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Telefon:</span></h5>
+                            <div class="input-group flex-nowrap">
+                                <input type="text" class="form-control" placeholder="{{phoneD}}" aria-label="Phone" aria-describedby="addon-wrapping" [(ngModel)]="phoneD">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Specijalizacija:</span></h5>
+                            <select [(ngModel)]="selectedOption" (change)="onOptionSelected(selectedOption)">
+                                <option *ngFor="let option of options" [value]="option">{{option}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row top-buffer">
+                        <div class="col-sm">
+                            <h5><span class="name">Slika:</span></h5>
+                            <div class="form-group col">
+                                <input type="file" id="userImage" class="form-control custom-file" name="userImage"
+                                  (change)="onFileSelected($event)"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row top-buffer text-center">
+                        <div class="col-sm">
+                            <button type="button" (click)="updateDoctor()" class="btn black">Izmeni</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </span>
+    <span *ngIf="deleteDoctorBool">
+      <nav class="navbar navbar-expand-lg transparent-navbar custom">
+          <div class="container-fluid">
+              <div class="row text-center" style="margin: 0 auto">
+                  <h5><span class="name" style="color: #3b3c3d;">Obriši doktora {{doctorFirstName}} {{doctorLastName}}?</span></h5>
+                  <div class="col-sm">
+                      <button type="button" (click)="deleteDoctor()" class="btn red">Da</button>
+                  </div>
+                  <div class="col-sm">
+                      <button type="button" (click)="noDoctor()" class="btn black">Ne</button>
+                  </div>
+              </div>
+          </div>
+      </nav>
+    </span>
+    <nav class="navbar navbar-expand-lg transparent-navbar">
+      <div class="container-fluid" >
+        <div class="row text-center">
+          <div class="col-sm text-center" *ngFor="let doctor of doctors">
+              <div class="card" style="width: 18rem;">
+                <div class="shadow">
+                    <span *ngIf="doctor.img != 'defaultUser.jpg'">
+                        <img src="http://localhost:4000/uploads/doctor_images/{{doctor.img}}" class="card-img-top" width="100%" height="425" alt="Profile image">
+                      </span>
+                      <span *ngIf="doctor.img == 'defaultUser.jpg'">
+                        <img src="../../../../../assets/images/defaultUser.jpg" class="card-img-top" width="100%" height="425" style="border-radius: 15px;" alt="Profile image">
+                      </span>
+                </div>
+                <div class="shadow">
+                    <div class="card-body">
+                        <h4 class="card-title">{{doctor.firstname}} {{doctor.lastname}}</h4>
+                        <p class="card-text"><span style="color: #91051f; font-weight: bold;">Korisničko ime: </span>{{doctor.username}}</p>
+                        <p class="card-text">
+                            <span style="color: #91051f; font-weight: bold;">Lozinka: </span>
+                            {{ hidePassword(doctor.password) }}
+                          </p>
+                        <p class="card-text"><span style="color: #91051f; font-weight: bold;">Adresa: </span>{{doctor.address}}</p>
+                        <p class="card-text"><span style="color: #91051f; font-weight: bold;">Telefon: </span>{{doctor.phone}}</p>
+                        <p class="card-text"><span style="color: #91051f; font-weight: bold;">Email: </span>{{doctor.email}}</p>
+                        <p class="card-text"><span style="color: #91051f; font-weight: bold;">Licenca: </span>{{doctor.license}}</p>
+                        <p class="card-text"><span style="color: #91051f; font-weight: bold;">Specijalizacija: </span>{{doctor.specialization}}</p>
+                        <p class="card-text"><span style="color: #91051f; font-weight: bold;">Ogranak: </span>{{doctor.branch}}</p>
+                        <p class="card-text"><span style="color: #91051f; font-weight: bold;">Status: </span>{{getStatus(doctor.status)}}</p>
+                        <div class="row">
+                            <div class="col-sm">
+                                <button type="button" (click)="updateDoctorShow(doctor.username, doctor.firstname, doctor.lastname, doctor.address, doctor.license, doctor.phone, doctor.specialization)" class="btn black">Ažuriraj</button>
+                            </div>
+                            <div class="col-sm">
+                                <button type="button" (click)="deleteDoctorShow(doctor.firstname, doctor.lastname, doctor.username)" class="btn red">Obriši</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+</div>
+
+

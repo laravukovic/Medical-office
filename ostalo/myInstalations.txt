@@ -1,0 +1,16 @@
+CMD frontend/src/app :
+ng add @ng-bootstrap/ng-bootstrap
+npm install --save bootstrap jquery {--legacy-peer-deps, --force, npm install --save --legacy-peer-deps}
+
+CMD backend :
+npm install --save multer
+npm install --save sharp
+npm install --save fs
+npm install --save @types/multer
+
+MOZDA: npm install -g typescript
+
+SERVER CMD backend/uploads http-server ./:
+npm install -g http-server
+
+u frontend pa npm install pa on kupi sve iz package.json

@@ -1,0 +1,84 @@
+<body>
+    <div class="container-fluid">
+        <div class="w-100 p-3">
+          <app-header></app-header>
+        </div>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+            <div class="container-fluid" >
+                <div class="row">
+                    <div class="col-sm">
+                      <h1 style="color: #3b3c3d;">Moji pregledi:</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <span *ngIf="show">
+            <nav class="navbar navbar-expand-lg transparent-navbar custom">
+                <div class="container-fluid">
+                    <div class="row text-center" style="margin: 0 auto">
+                        <h5><span class="name" style="color: #3b3c3d;">Otkaži pregled: '{{name}} {{date}} {{time}}'?</span></h5>
+                        <div class="col-sm">
+                            <button type="button" (click)="cancel()" class="btn red">Da</button>
+                        </div>
+                        <div class="col-sm">
+                            <button type="button" (click)="no()" class="btn black">Ne</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </span>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+          <div class="container-fluid" >
+            <div class="row text-center">
+                <div class="col-sm text-center" *ngFor="let schedule of schedules">
+                    <div class="card" style="width: 18rem;">
+                        <div class="shadow">
+                            <div class="card-body">
+                                <h4 class="card-title">{{schedule.name}}</h4>
+                                <h6 class="card-text">{{schedule.date}}, {{schedule.time}}h</h6>
+                                <p class="card-text">{{schedule.doctorFullName}}, {{schedule.branch}}</p>
+                                <button type="button" (click)="cancelShow(schedule.name, schedule.date, schedule.time, schedule.user, schedule.doctor)" class="btn red">Otkaži</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+            <div class="container-fluid" >
+                <div class="row">
+                    <div class="col-sm">
+                      <h1 style="color: #3b3c3d;">Moji izveštaji:</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg transparent-navbar">
+            <div class="container-fluid" >
+              <div class="row text-center">
+                  <div class="col-sm text-center" *ngFor="let report of reports">
+                      <div class="card" style="width: 18rem;">
+                          <div class="shadow">
+                              <div class="card-body report">
+                                  <h4 class="card-title">{{report.name}}</h4>
+                                  <h6 class="card-text">{{report.date}}, {{report.time}}h</h6>
+                                  <p class="card-text" style="font-weight: bold; color: #91051f;">{{report.doctorFullName}}, {{report.specialization}}</p>
+                                  <p class="card-text"><span class="bold">Razlog dolaska: </span>{{report.reason}}</p>
+                                  <p class="card-text"><span class="bold">Dijagnoza: </span>{{report.diagnosis}}</p>
+                                  <p class="card-text"><span class="bold">Preporučena terapija: </span>{{report.therapy}}</p>
+                                  <p class="card-text"><span class="bold">Kontrola: </span>{{nextFormat(report.next)}}</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+
+
+
+
